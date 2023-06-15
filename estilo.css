@@ -15,8 +15,11 @@
  *                Sección: General 
  * =========================================================
  */
-
-body{background-color: var(--fondo-Color);}
+html{background-color: var(--fondo-Color);}
+body{
+    margin: auto;
+    width: 90%;
+}
 h1,h2,h3,h4,h5,h6{
     font-family: Inter;
     color: var(--texto-Color);
