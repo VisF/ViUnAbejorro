@@ -1,12 +1,75 @@
 :root{
-    --colorPrimario-color:#F6D248;
-    --colorSecundario-color:#C83535;
-    --fuentePrimaria-text-syle:inter;
-    --fuenteSecundaria-text-style: OpenSans;
-    --colorTexto-text-color: #282828;
-    --colorFondo-background-color: #
+    --boton-ColorPrimario:#F6D248;
+    --boton-ColorDestacado:#C83535;
+
+    --texto-Color: #282828;
+    --fondo-Color: #FAF3E8;
+
+    --label-Color: #999999;
+}
+@font-face { font-family: OpenSans; src: url('fonts/OpenSans-Regular.ttf'); } 
+@font-face { font-family: Inter; font-weight: bold; src: url('fonts/Inter-Bold.ttf');}
+
+
+/* =========================================================
+ *                Sección: General 
+ * =========================================================
+ */
+
+body{background-color: var(--fondo-Color);}
+h1,h2,h3,h4,h5,h6{
+    font-family: Inter;
+    color: var(--texto-Color);
+}
+h1{font-size: 32px;}
+h2{font-size: 28px;}
+h3{font-size: 26px;}
+h4{font-size: 24px;}
+h5{font-size: 22px;}
+h6{font-size: 20px;}
+p{
+    font-size: 16px;
+    font-family: OpenSans;
+    color: var(--texto-Color);
 }
 
 
 
+/* =========================================================
+ *                Sección: Componentes 
+ * =========================================================
+*/
+
+/* Navbar */
+
+
+
+
+/* Noticia */
+
+
+
+
+/* =========================================================
+ *                Sección: Paginas
+ * =========================================================
+*/
+
+/* index */
+
+
+
+
+/* Iniciar Sesion */
+
+/* Reportar Avistamiento */
+
+/* Registrarse */
+
+
+
+
+/* Noticias */
+
+/* Noticia */
 
