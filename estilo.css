@@ -63,11 +63,235 @@ p{
 
 
 
-/* Iniciar Sesion */
+/* Iniciar Sesion */ /* Registrarse */
 
+body{  
+    align-items: center;
+    background-color: #FAF3E8;
+    display: flex;
+    justify-content: center;
+  }
+.sesion {
+    background-color: #FAF4EA;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 470px;
+    padding: 20px;
+    width: 320px;
+    margin-top: 20%;
+  }
+  .sesion-short{
+    height: 400px;
+  }
+  .sesion-short .submit{
+    margin-top: 40px;
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+  .ic2{
+    margin-top: 30px;
+  }
+  .input {
+    background-color: #FAF3E8;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #000000;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  
+  .cut {
+    background-color: #FAF4EA;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 80px;
+  }
+  
+  
+  .cut-short {
+    width: 50px;
+  }
+  
+  
+  .cut-long {
+    width: 120px;
+  }
+  
+  .input:focus ~ .cut,
+  .input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+  
+  .placeholder {
+    color: #b1afad;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  
+  .input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+  }
+  
+  .input:focus ~ .placeholder {
+    color: #000000;
+  }
+  
+  .submit {
+    background-color: #F6D248;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:active {
+    background-color: #e4c444;
+  }
+  
+  #terminos{
+    color: #b1afad;
+  }
+  #terminos input{
+    margin-top: 6px;
+  }
+  #textoAlerta{
+    margin-top: 3px;
+    margin-bottom: 0;
+    background-color: #C83535;
+    border-radius: 4px;
+  }
 /* Reportar Avistamiento */
 
-/* Registrarse */
+.container {
+    background-color: #FAF3E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .form{
+    background-color: #FAF4EA;
+  }
+  
+  .center-input{
+    width: 290px;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  #myMap{
+    height: 300px;
+    width: 300px;
+  }
+  #baseMap{
+    height: 300px;
+    width: 300px;
+    color: white;
+  }
+  
+  
+  .abejorro-container {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .abejorroimg {
+    height: 200px;
+    width: 200px;
+    padding: 0;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .radio-label {
+    margin-top: 10px;
+  }
+  #textArea{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  #submit{
+    background-color: #F6D248;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    font-size: 18px;
+    height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #myCanvas{
+    width: 300px;
+    height: 300px;
+  }
 
 
 

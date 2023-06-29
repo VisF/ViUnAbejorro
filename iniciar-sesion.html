@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión/Vi un abejorro</title>
-
     <link rel="stylesheet" href="estilo.css">
     <script src="./js/componentes/NavBar.js" type="text/javascript" defer></script>
 </head>
-<body>
-    
+
+<body class="bodySesion">
+    <div id="boxForm">
+
+        <form class="sesion sesion-short" onsubmit="submitForm(event)">
+
+            <div class="input-container ic1">
+                <input id="email" class="input" type="email" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="email" class="placeholder">Mail</label>
+            </div>
+
+            <div class="input-container ic1">
+                <input id="password" class="input" type="password" placeholder=" " />
+                <div class="cut"></div>
+                <label for="password" class="placeholder">Contraseña</label>
+            </div>
+
+            <div id="alertaSesion"></div>
+
+            <button type="submit" class="submit">Iniciar Sesión</button>
+        </form>
+    </div>
     <script src="./js/iniciar_sesion.js"></script>
+
 </body>
+
 </html>

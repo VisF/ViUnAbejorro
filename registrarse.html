@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse/Vi un abejorro</title>
-
     <link rel="stylesheet" href="estilo.css">
     <script src="./js/componentes/NavBar.js" type="text/javascript" defer></script>
 </head>
+
 <body>
-    
+    <div id="boxForm">
+        <form class="sesion" onsubmit="submitForm(event)">
+
+            <div class="input-container ic1">
+                <input id="email" class="input" type="email" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="email" class="placeholder">Email</label>
+            </div>
+
+            <div class="input-container ic1">
+                <input id="password" class="input" type="password" placeholder=" " />
+                <div class="cut"></div>
+                <label for="password" class="placeholder">Contraseña</label>
+            </div>
+
+            <div class="input-container ic2">
+                <input id="passwordCheck" class="input" type="password" placeholder=" " />
+                <div class="cut cut-long"></div>
+                <label for="passwordCheck" class="placeholder">Repetir contraseña</label>
+            </div>
+
+            <label id="terminos"><input type="checkbox" id="checkTerminos">Aceptar <a href="terminos.html"
+                    target="_blank">terminos y condiciones</a></label>
+            <div id="alertaSesion"></div>
+
+            <button type="submit" class="submit">Confirmar</button>
+        </form>
+    </div>
     <script src="./js/registro.js"></script>
 </body>
+
 </html>
