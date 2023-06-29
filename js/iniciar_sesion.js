@@ -1,7 +1,6 @@
-// Obtener la base de datos de usuarios almacenada en localStorage
+
 let usersData = localStorage.getItem('users');
 
-// Convertir la cadena JSON en un objeto JavaScript
 let users = JSON.parse(usersData);
 
 let alerta = document.getElementById('alertaSesion');
