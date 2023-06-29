@@ -16,7 +16,7 @@ function submitForm(event) {
             for (let i = 0; i < users.length; i++) {
                 const usuario = users[i];
                 if (usuario.email === email && usuario.password === password) {
-                    window.location.href = 'index.html';
+                    window.location.href = 'index.html?email=' + email;
                     return;
                 }
             }
