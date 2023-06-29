@@ -1,4 +1,4 @@
-// Obtener los usuarios almacenados en localStorage
+
 let users = JSON.parse(localStorage.getItem('users')) || [];
 
 let alerta = document.getElementById('alertaSesion');
@@ -27,10 +27,9 @@ function submitForm(event) {
           users.push(usuario);
           alerta.innerHTML = '';
 
-          // Guardar usuarios en localStorage
           localStorage.setItem('users', JSON.stringify(users));
           
-          // Limpiar los campos de entrada
+
           document.getElementById('email').value = '';
           document.getElementById('password').value = '';
           document.getElementById('passwordCheck').value = '';
