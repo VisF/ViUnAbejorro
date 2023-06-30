@@ -45,6 +45,9 @@ a{
 a.destacado{
     color: var(--boton-ColorDestacado);
 }
+a.sin{
+    text-decoration: none;
+}
 
 
 

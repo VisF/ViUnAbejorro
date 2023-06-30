@@ -15,7 +15,7 @@ fetch('./noticias.json')
 .then(data => {
     noticias=data;
     data.forEach(noticia => {
-        const card_noticia = `<a href="./noticia.html?n=${noticia.id}">
+        const card_noticia = `<a class="sin" href="./noticia.html?n=${noticia.id}">
         <div id=${noticia.id} class="card">
             <img src="${noticia.img}" alt="${noticia.alt}" style="width:100%">
             <div>
