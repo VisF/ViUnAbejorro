@@ -62,10 +62,8 @@ a{
   display: flex;
 }
 .logo{
-  justify-content: right;
-  align-items: center;
-  margin: auto;
-  margin-right: 93px;
+  left: 40%;
+  margin-right: 130px;
   
 }
 .logo-img{
