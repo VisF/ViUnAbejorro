@@ -34,7 +34,7 @@ h3{font-size: 26px;}
 h4{font-size: 24px;}
 h5{font-size: 22px;}
 h6{font-size: 20px;}
-p{
+p, li{
     font-size: 16px;
     font-family: OpenSans;
     color: var(--texto-Color);
@@ -295,6 +295,36 @@ body.mobile-nav-open  {
 }
 
 @media (min-width: 1024px) {
+    main{
+        max-width: 1440px;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 20px;
+    }
+    section.dos-partes{
+        flex-direction: row;
+    }
+    section div{
+        width: 50%;
+    }
+    section div img{
+        width: 100%;
+        margin: auto;
+    }
+    p,h1,h2,h3,h4{
+        text-align: center;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    section.dos-partes p, section.dos-partes h1, section.dos-partes h2, section.dos-partes h3{
+        text-align: start;
+        width: 90%;
+        margin-bottom: 10px;
+    }
   .navigation {
     -moz-transition: none;
     -o-transition: none;
@@ -401,7 +431,21 @@ body.mobile-nav-open  {
 */
 
 /* index */
+h1{
+    font-size: 44px;
+}
+section img{
+    width: 100%;
+}
+span.destacado{
+    color:var(--boton-ColorPrimario);
+    text-shadow: 4px 4px 0 var(--texto-Color),
+    -2px -2px 0 var(--texto-Color),  
+     2px -2px 0 var(--texto-Color),
+    -2px  2px 0 var(--texto-Color),
+     2px  2px 0 var(--texto-Color);;
 
+}
 
 
 
