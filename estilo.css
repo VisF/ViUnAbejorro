@@ -34,10 +34,16 @@ h3{font-size: 26px;}
 h4{font-size: 24px;}
 h5{font-size: 22px;}
 h6{font-size: 20px;}
-p, li{
+p, li, a{
     font-size: 16px;
     font-family: OpenSans;
     color: var(--texto-Color);
+}
+a{
+    text-decoration: underline;
+}
+a.destacado{
+    color: var(--boton-ColorDestacado);
 }
 
 
@@ -51,9 +57,6 @@ p, li{
 body {
   margin: 0;
   padding: 0;
-}
-a{
-  font-size: 26px;
 }
 .mobile-header {
   background: var(--fondo-Color);
@@ -300,6 +303,7 @@ body.mobile-nav-open  {
     }
     section{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
 
         margin-bottom: 20px;
@@ -310,6 +314,9 @@ body.mobile-nav-open  {
     section div{
         width: 50%;
     }
+    section div.individual p{
+        text-align: center;
+    }
     section div img{
         width: 100%;
         margin: auto;
@@ -318,7 +325,6 @@ body.mobile-nav-open  {
         text-align: center;
         width: 70%;
         margin: auto;
-        margin-bottom: 20px;
     }
     section.dos-partes p, section.dos-partes h1, section.dos-partes h2, section.dos-partes h3{
         text-align: start;
@@ -433,6 +439,10 @@ body.mobile-nav-open  {
 /* index */
 h1{
     font-size: 44px;
+}
+main#index h2, main#index h3, main#index h4{
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 section img{
     width: 100%;
