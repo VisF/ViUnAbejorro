@@ -326,7 +326,7 @@ body.mobile-nav-open  {
         width: 70%;
         margin: auto;
     }
-    section.dos-partes p, section.dos-partes h1, section.dos-partes h2, section.dos-partes h3{
+    section.dos-partes p, section.dos-partes h1, section.dos-partes h2, section.dos-partes h3 {
         text-align: start;
         width: 90%;
         margin-bottom: 10px;
