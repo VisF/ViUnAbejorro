@@ -53,13 +53,37 @@ window.addEventListener('DOMContentLoaded', () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const correoFinal = urlParams.get('email');
-  
-    const enlaces = document.getElementsByClassName('miEnlace');
-    for (let i = 0; i < enlaces.length; i++) {
+    let botonA = document.getElementById("signup-button");
+    let botonB = document.getElementById("login-button");
+    let botonC = document.getElementById("close-sesion");
+    let enlaceAvistamiento = document.getElementById("link-avistamiento");
+    if (correoFinal === null) {
+        botonA.style.display = "block";  
+        botonB.style.display = "block";  
+        botonC.style.display = "none"; 
+        enlaceAvistamiento.style.display = "none";  
+      } else {
+        botonA.style.display = "none";   // Oculta el botón A
+        botonB.style.display = "none";   // Oculta el botón B
+        botonC.style.display = "block";  // Muestra el botón C
+        enlaceAvistamiento.style.display = "block"; //Muestra el enlace
+        const enlaces = document.getElementsByClassName('mi-enlace');
+        for (let i = 0; i < enlaces.length; i++) {
       const href = enlaces[i].getAttribute('href');
       enlaces[i].setAttribute('href', `${href}/?email=${correoFinal}`);
     }
+      }
+    
   });
 
-
+  window.onload = function() {
+    let boton = document.getElementById("close-sesion");
+    boton.onclick = function() {
+        const enlaces = document.getElementsByClassName('mi-enlace');
+        for (let i = 0; i < enlaces.length; i++) {
+          const href = enlaces[i].getAttribute('href');
+          enlaces[i].setAttribute('href', `${href}`);
+        }
+    };
+  };
   
