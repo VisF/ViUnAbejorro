@@ -1,51 +1,63 @@
-"use strict"
+"use strict";
 
 let $mobileNav = $('.navigation');
 let $mobileNavToggle = $('.mobile-nav-toggle > span');
-
-
-
+let mobileLogo = document.getElementById("logo-desktop");
 function toggleMobileNav() {
-    const mobileNav = document.querySelector('.navigation');
-    const body = document.body;
-  
-    mobileNav.classList.toggle('open');
-    body.classList.toggle('mobile-nav-open');
-  }
-  
-  window.addEventListener('DOMContentLoaded', () => {
-    const logoElement = document.getElementById('logo');
-    logoElement.addEventListener('click', toggleMobileNav);
-  });
+  const mobileNav = document.querySelector('.navigation');
+  const body = document.body;
 
-
-
-/*function toggleMobileNav() {
-    $mobileNav.toggleClass('open');
-    $('body').toggleClass('mobile-nav-open');
-}*/
-
-$(function() {
-    $mobileNavToggle.click(toggleMobileNav);
-    });
-$(document).on('click', function(e) {
-    let $target = $(e.target);
-    if (window.innerWidth >= 1024) {
-        // Oculta la hamburguesa en la versión desktop
-        if (mobileNavToggle) {
-            mobileNavToggle.style.display = 'none';
-        }
-
-        // Asegúrate de que el menú esté visible en la versión desktop
-        if (navigation) {
-            navigation.style.left = '0';
-        }
+  mobileNav.classList.toggle('open');
+  body.classList.toggle('mobile-nav-open');
 }
-    // Verificar si se hizo clic fuera de la barra de navegación y del botón de menú
-    if (!$target.closest('.navigation').length && !$target.closest('.mobile-nav-toggle').length) {
-        $mobileNav.removeClass('open');
-        $('body').removeClass('mobile-nav-open');
+
+// Remove the event listener for logoElement click
+// window.addEventListener('DOMContentLoaded', () => {
+//   const logoElement = document.getElementById('logo');
+//   logoElement.addEventListener('click', toggleMobileNav);
+// });
+
+// Automatically open the menu on desktop screens
+$(window).on('load resize', function() {
+  if (window.innerWidth >= 1024) {
+    $mobileNav.addClass('open');
+    $('body').addClass('mobile-nav-open');
+    mobileLogo.style.display = "block";
+
+
+  } else {
+    $mobileNav.removeClass('open');
+    $('body').removeClass('mobile-nav-open');
+    mobileLogo.style.display = "none";
+  }
+});
+
+// Bind the click event to the mobileNavToggle
+$(function() {
+  $mobileNavToggle.click(toggleMobileNav);
+});
+
+$(document).on('click', function(e) {
+  let $target = $(e.target);
+  if (window.innerWidth >= 1024) {
+    // Oculta la hamburguesa en la versión desktop
+    if (mobileNavToggle) {
+      mobileNavToggle.style.display = 'none';
     }
+
+    // Asegúrate de que el menú esté visible en la versión desktop
+    if (navigation) {
+      navigation.style.left = '0';
+    }
+  }
+  // Verificar si se hizo clic fuera de la barra de navegación y del botón de menú
+  if (
+    !$target.closest('.navigation').length &&
+    !$target.closest('.mobile-nav-toggle').length
+  ) {
+    $mobileNav.removeClass('open');
+    $('body').removeClass('mobile-nav-open');
+  }
 });
 
 

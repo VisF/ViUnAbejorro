@@ -364,7 +364,7 @@ body.mobile-nav-open  {
   .mobile-nav-toggle{
     display: none;
   }
-  .logo{
+  .logo-desktop{
     justify-content: left;
     align-items: center;
     margin-left: 10px;
