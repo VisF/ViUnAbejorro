@@ -15,15 +15,16 @@ fetch('./noticias.json')
 .then(data => {
     noticias=data;
     data.forEach(noticia => {
-        const card_noticia = `<a class="sin" href="./noticia.html?n=${noticia.id}">
+        const card_noticia = `
         <div id=${noticia.id} class="card">
+        <a class="sin" href="./noticia.html?n=${noticia.id}" >
             <img src="${noticia.img}" alt="${noticia.alt}" style="width:100%">
             <div>
                 <h3><span style="${colorSeccion(noticia.seccion)};">${noticia.seccion}</span>/${noticia.titulo}</h3>
                 <p>${noticia.bajada}</p>
             </div>
-        </div>
-        </a>`;
+            </a>
+        </div>`;
         contenedor.innerHTML+=card_noticia;
     });
 }).catch(function () {
