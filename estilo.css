@@ -455,7 +455,7 @@ body.mobile-nav-open  {
 */
 
 /* index */
-h1{
+main#index h1{
     font-size: 44px;
 }
 main#index h2, main#index h3, main#index h4{
@@ -635,6 +635,8 @@ body{
   }
   .form{
     background-color: #FAF4EA;
+    
+    height: fit-content;
   }
   
   .center-input{
